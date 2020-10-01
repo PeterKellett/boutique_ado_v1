@@ -20,6 +20,8 @@
     />
     {% endblock %} {% block extra_css%} {% endblock %} {% block corejs %}
     <!-- Optional JavaScript -->
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/5522ae6586.js" crossorigin="anonymous"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -43,7 +45,7 @@
 
   <body>
     <header class="container-fluid fixed-top">
-      <div class="row">
+      <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
         <div
           class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left"
         >
@@ -118,7 +120,7 @@
             <li class="list-inline-item">
               <a
                 class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
-                href="{% url 'view_bag' %}"
+                href=""
               >
                 <div class="text-center">
                   <div><i class="fas fa-shopping-bag fa-lg"></i></div>
