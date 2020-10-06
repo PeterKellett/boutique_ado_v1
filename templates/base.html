@@ -105,10 +105,9 @@
                 aria-labelledby="user-options"
               >
                 
-                {% if request.user.is_authenticated %} 
-                {{ user }}
+                {% if request.user.is_authenticated %}                 
                 {% if request.user.is_superuser %}
-                {{ user }}
+               
                 <a href="" class="dropdown-item">Product Management</a>
                 {% endif %}
                 <a href="" class="dropdown-item">My Profile</a>
