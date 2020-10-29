@@ -18,8 +18,12 @@ def profile(request):
             form.save()
             print("form save")
             messages.success(request, 'Profile updated successfully')
-
-    form = UserProfileForm(instance=profile)
+        else:
+            messages.error(request,
+                           'Update failed. \
+                            Please ensure all fields are correct.')
+    else:
+        form = UserProfileForm(instance=profile)
     orders = profile.order.all()
 
     template = 'profiles/profile.html'
