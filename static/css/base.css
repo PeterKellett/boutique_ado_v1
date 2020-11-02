@@ -254,6 +254,7 @@ input[name='q']::placeholder {
     cursor: pointer;
 }
 
+/* This css is for elements in products/templates/products/custom_widget_templates/custom_clearable_file_input.html*/
 .custom-checkbox .custom-control-label::before {
     border-radius: 0;
     border-color: #dc3545;
