@@ -15,9 +15,16 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Category',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id',
+                 models.AutoField(auto_created=True,
+                                  primary_key=True,
+                                  serialize=False,
+                                  verbose_name='ID')),
                 ('name', models.CharField(max_length=254)),
-                ('friendly_name', models.CharField(blank=True, max_length=254, null=True)),
+                ('friendly_name',
+                 models.CharField(blank=True,
+                                  max_length=254,
+                                  null=True)),
             ],
         ),
         migrations.CreateModel(
@@ -31,7 +38,11 @@ class Migration(migrations.Migration):
                 ('rating', models.DecimalField(blank=True, decimal_places=2, max_digits=6, null=True)),
                 ('image_url', models.URLField(blank=True, max_length=1024, null=True)),
                 ('image', models.ImageField(blank=True, null=True, upload_to='')),
-                ('category', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to='products.category')),
+                ('category',
+                 models.ForeignKey(blank=True,
+                                   null=True,
+                                   on_delete=django.db.models.deletion.SET_NULL,
+                                   to='products.category')),
             ],
         ),
     ]
